@@ -1,0 +1,8 @@
+#npm modules
+node_modules/
+
+#browserify build
+client/build.js
+
+#local variables
+.env
