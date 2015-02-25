@@ -1,8 +1,7 @@
 require('angular');
-require('angular-ui-router');
 var factories = require('./factories');
 
-var app = angular.module('nutr', ['ui.router', 'nutrFactories'])
+var app = angular.module('nutr', ['nutrFactories'])
 .controller('HomeController', function($scope, apiFact){
   $scope.sendReq = function(keyEvent){
     if (keyEvent.which === 13) {
