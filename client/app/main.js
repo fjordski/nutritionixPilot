@@ -7,7 +7,10 @@ var app = angular.module('nutr', ['ui.router', 'nutrFactories'])
   $scope.val;
   $scope.sendReq = function(keyEvent){
     if (keyEvent.which === 13) {
-      apiFact.search($scope.val);
+      apiFact.search($scope.val)
+        .then(function(resp){
+          $scope.results = resp.data.hits;
+        });
     }
   };
 });

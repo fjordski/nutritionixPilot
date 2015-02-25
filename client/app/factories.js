@@ -5,8 +5,8 @@ module.exports = angular.module('nutrFactories', [])
       method: 'GET',
       url: '/search/'+query+'?results=0%3A20'
     })
-    .then(function(resp){
-      console.log(resp.data);
+    .catch(function(err){
+      console.log(err);
     });
   };
 
