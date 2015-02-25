@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html ng-app="nutrTest">
+<html ng-app="nutr">
 <head lang="en">
  <title>NutritionixSearcher</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="container-fluid" ng-controller="HomeController">
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-8 col-md-offset-4">
         <h1 class="logo">Nutrionix Search</h1>
       </div>
+    </div>
+    <div>
+      <input type=text placeholder="query" ng-model="val" ng-keypress="sendReq($event)">
     </div>
     <!-- the div where all templates will be loaded -->
   </div>

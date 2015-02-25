@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     browserify: {
       build: {
-        src: 'client/main.js',
+        src: 'client/app/main.js',
         dest: 'client/build.js'
       }
     },

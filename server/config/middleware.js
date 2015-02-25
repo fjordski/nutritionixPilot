@@ -11,7 +11,7 @@ module.exports = function(app, express) {
   app.use(bodyParser.json());
   app.use(express.static(__dirname + '/../../client'));
 
-  app.use('/api/', router); // use sms router for all sms requests
+  app.use('/search/', router); // use sms router for all sms requests
 
   app.use(helpers.errorLogger);
   app.use(helpers.errorHandler);
