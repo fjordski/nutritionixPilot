@@ -14,12 +14,6 @@ module.exports = function(grunt) {
         dest: 'client/build.js'
       }
     },
-    jscs: {
-      src: jsFiles,
-      options: {
-        config: './config/.jscsrc',
-          }
-    },
     jshint: {
       options: {
         jshintrc: true
@@ -33,7 +27,7 @@ module.exports = function(grunt) {
   });
 
   require('load-grunt-tasks')(grunt);
-  grunt.registerTask('default', ['jshint', 'jscs', 'browserify']);
+  grunt.registerTask('default', ['jshint', 'browserify']);
   grunt.registerTask('build', ['browserify']);
-  grunt.registerTask('test', ['jshint', 'jscs']);
+  grunt.registerTask('test', ['jshint']);
 };
